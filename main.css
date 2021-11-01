@@ -1,0 +1,115 @@
+/* COMMON */
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #424242;
+  font-size: calc(1rem + 0.25vh);
+  min-height: 100vh;
+  margin: 0;
+}
+#root {
+  display: block;
+  width: 100%;
+}
+.app {
+  min-height: 100vh;
+}
+h1 {
+  color: #292922;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+a {
+  color: #302ae6;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+a:hover,
+a:focus {
+  border-bottom: 3px solid currentColor;
+}
+
+/* DARK MODE */
+.dark {
+  background-color: #161625;
+  color: #e1e1ff;
+}
+.dark h1 {
+  color: #818cab;
+}
+.dark a {
+  color: #9a97f3;
+}
+.dark .post-meta {
+  color: #818cab;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 25px 0;
+  margin: 0 40px 0 0;
+}
+
+/* THEME SWITCH */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.theme-switch input {
+  display: none;
+}
+.theme-switch .slider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: 0.4s; /* 상태 변환 후 다시 렌더링하기 때문에 제대로 동작하지 않는다.*/
+  border-radius: 34px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.theme-switch .slider:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 4px;
+  bottom: 4px;
+  transition: 0.4s; /* 상태 변환 후 다시 렌더링하기 때문에 제대로 동작하지 않는다.*/
+  border-radius: 50%;
+  background-color: #fff;
+}
+.theme-switch input:checked + .slider {
+  background-color: #66bb6a;
+}
+.theme-switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* MAIN */
+/* DUMMY CONTENT */
+section {
+  max-width: 68%;
+  margin: 0 auto;
+}
+.post-meta {
+  font-size: 1rem;
+  font-style: italic;
+  display: block;
+  margin-bottom: 4vh;
+  color: #536390;
+}
